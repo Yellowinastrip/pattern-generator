@@ -1,5 +1,5 @@
 export const longHigway = {
-  pattern: [
+  lollipops: [
     [['g12', true], ['r23', true], ['g34', false], ['b42', true]],
     [['g12', true], ['r23', true], ['b34', true], ['g42', false]],
     [['g12', true], ['b23', true], ['g34', false], ['r42', true]],
@@ -35,7 +35,7 @@ export const spider = {
 };
 
 export const distributedHigway = {
-  pattern: [
+  lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g34', false], ['b42', true]]},
     {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
     {stick: [['g12', true]], candy: [['b23', true], ['g34', false], ['r42', true]]},
