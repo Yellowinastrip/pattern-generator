@@ -1,4 +1,4 @@
-import {spider as pattern} from './patterns.js'
+import {pattern} from './patterns.js'
 
 function generateForm(inps, wrapper, pattern, ctx) {
   inps.forEach((el) => {
@@ -149,10 +149,23 @@ function drawLine(ctx, i, pattern, width, height) {
       }}
 }
 
-window.onload = () => {
+function generatePatternSelect(pattern) {
+  const patternSelect = document.getElementById('pattern-select');
   
-  const {lollipops, inputs} = pattern;
+  for (let i = 0; i < pattern.length; i++){
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = pattern[i][0];
+    patternSelect.appendChild(opt);
+  };
   
+  patternSelect.addEventListener('change', generateContent);
+};
+
+function generateContent() {
+  const patternSelect = document.getElementById('pattern-select');  
+  const {lollipops, inputs} = pattern[patternSelect.value][1];
+
   const canvas = document.getElementById('pattern-canvas');
   canvas.width = window.innerWidth;
   canvas.height = 600;
@@ -164,5 +177,9 @@ window.onload = () => {
   generateEpsilonForm(epsilonForm, lollipops, ctx);
 
   drawPattern(lollipops, ctx);
+};
 
+window.onload = () => {
+  generatePatternSelect(pattern);
+  generateContent();  
 };

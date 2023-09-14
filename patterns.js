@@ -1,4 +1,4 @@
-export const smallSpider = {
+const smallSpider = {
   lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g32', false]]},
     {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
@@ -14,7 +14,7 @@ export const smallSpider = {
 };
 
 
-export const spider = {
+const spider = {
   lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g32', false]]},
     {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
@@ -49,7 +49,7 @@ export const spider = {
   inputs: ['g12', 'r13', 'b14', 'r23', 'b24', 'g32', 'b34', 'g42', 'r43'],
 };
 
-export const distributedHigway = {
+const distributedHigway = {
   lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g34', false], ['b42', true]]},
     {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
@@ -70,7 +70,7 @@ export const distributedHigway = {
 };
 
 ///TO DO///
-export const longHigway = {
+const longHigway = {
   lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g34', false], ['b42', true]]},
     {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
@@ -89,3 +89,11 @@ export const longHigway = {
   ],
   inputs: ['g12', 'r13', 'b14', 'g23', 'r23', 'b23', 'g34', 'r34', 'b34', 'g42', 'r42', 'b42'],
 };
+
+
+
+export const pattern = [
+  ['Spider (small)', smallSpider], 
+  ['Spider', spider], 
+  ['Distributed Higway', distributedHigway]
+];
