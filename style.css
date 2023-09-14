@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+#pattern-form {
+  display: flex;
+  flex-wrap: wrap;
+}
