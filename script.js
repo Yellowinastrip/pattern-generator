@@ -1,4 +1,4 @@
-import {spider as pattern} from './patterns.js'
+import {smallSpider as pattern} from './patterns.js'
 
 function generateForm(inps, wrapper, pattern, ctx) {
   inps.forEach((el) => {

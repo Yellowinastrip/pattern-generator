@@ -1,3 +1,19 @@
+export const smallSpider = {
+  lollipops: [
+    {stick: [['g12', true]], candy: [['r23', true], ['g32', false]]},
+    {stick: [['g12', true]], candy: [['r23', true], ['b34', true], ['g42', false]]},
+    {stick: [['g12', true], ['r23', true]], candy: [['b34', true], ['r43', false]]},
+    {stick: [['g12', true]], candy: [['r23', false], ['b34', true], ['r43', false], ['g32', false]]},
+    
+    {stick: [['g12', true]], candy: [['b24', true], ['g42', false]]},
+    {stick: [['g12', true]], candy: [['b24', true], ['r43', true], ['g32', false]]},
+    {stick: [['g12', true], ['b24', true]], candy: [['r43', true], ['b34', false]]},
+    {stick: [['g12', true]], candy: [['b24', false], ['r43', true], ['b34', false], ['g42', false]]},
+  ],
+  inputs: ['g12', 'r13', 'b14', 'g22', 'r23', 'b24', 'g32', 'r33', 'b34', 'g42', 'r43', 'b44'],
+};
+
+
 export const spider = {
   lollipops: [
     {stick: [['g12', true]], candy: [['r23', true], ['g32', false]]},
