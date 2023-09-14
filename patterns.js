@@ -10,7 +10,7 @@ export const smallSpider = {
     {stick: [['g12', true], ['b24', true]], candy: [['r43', true], ['b34', false]]},
     {stick: [['g12', true]], candy: [['b24', false], ['r43', true], ['b34', false], ['g42', false]]},
   ],
-  inputs: ['g12', 'r13', 'b14', 'g22', 'r23', 'b24', 'g32', 'r33', 'b34', 'g42', 'r43', 'b44'],
+  inputs: ['g12', 'r23', 'b24', 'g32', 'b34', 'g42', 'r43'],
 };
 
 
@@ -46,7 +46,7 @@ export const spider = {
     {stick: [['b14', true], ['r43', true]], candy: [['g32', true], ['r23', false]]},
     {stick: [['b14', true]], candy: [['r43', false], ['g32', true], ['r23', false], ['b34', false]]},
   ],
-  inputs: ['g12', 'r13', 'b14', 'g22', 'r23', 'b24', 'g32', 'r33', 'b34', 'g42', 'r43', 'b44'],
+  inputs: ['g12', 'r13', 'b14', 'r23', 'b24', 'g32', 'b34', 'g42', 'r43'],
 };
 
 export const distributedHigway = {
