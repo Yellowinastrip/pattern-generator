@@ -1,4 +1,4 @@
-import {distributedHigway as lollipops, inputs} from './patterns.js'
+import {distributedHigway as pattern} from './patterns.js'
 
 function generateForm(inps, wrapper, pattern, ctx) {
   inps.forEach((el) => {
@@ -141,6 +141,8 @@ function drawLine(ctx, i, pattern, width, height) {
 }
 
 window.onload = () => {
+  
+  const {lollipops, inputs} = pattern;
   
   const canvas = document.getElementById('pattern-canvas');
   canvas.width = window.innerWidth;
