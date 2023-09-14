@@ -105,7 +105,7 @@ function drawPattern(pattern, ctx) {
 }
 
 function drawLine(ctx, i, pattern, width, height) {
-    const line = pattern[i];
+    const {stick, candy} = pattern[i]; 
     
     const epsilon = +document.getElementById('epsilon').value;
     const delta = +document.getElementById('delta').value;
@@ -113,7 +113,16 @@ function drawLine(ctx, i, pattern, width, height) {
 
     const y = i * (height / pattern.length) + vertOffset;
     let x = 0;
+    let line;
+    let isStickDrawn = false;
     while (x < width) {
+      if (isStickDrawn) {
+        line = candy;
+      } else {
+        isStickDrawn = true;
+        line = stick;
+      }
+      
       for (let j = 0; j < line.length; j++) {
         const inp = document.getElementById(line[j][0]);
         
