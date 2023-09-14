@@ -172,12 +172,20 @@ function generateContent() {
   const ctx = canvas.getContext('2d');
 
   const form = document.getElementById('pattern-form');
+  removeChildren(form);
   generateForm(inputs, form, lollipops, ctx);
   const epsilonForm = document.getElementById('epsilon-form');
+  removeChildren(epsilonForm);
   generateEpsilonForm(epsilonForm, lollipops, ctx);
 
   drawPattern(lollipops, ctx);
 };
+
+function removeChildren(node) {
+  while (node.firstChild) {
+    node.removeChild(node.firstChild);
+  }
+}
 
 window.onload = () => {
   generatePatternSelect(pattern);
