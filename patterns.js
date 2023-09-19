@@ -110,6 +110,7 @@ const longHigway = {
 
 export const pattern = [
   ['Type A', typeA],
+  ['Type A (2 - 3, 5, 7)', typeA_1],
   ['Type B', typeB], 
   ['Type B (1 - 8)', typeB_1], 
 ];
