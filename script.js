@@ -96,7 +96,7 @@ function drawPattern(pattern, ctx) {
   const height = canvas.height;
 
   const theme = getTheme();
-  ctx.fillStyle = (theme == 'dark')? 'Black' : 'White';
+  ctx.fillStyle = (theme == 'dark')? 'Black' : 'rgb(136, 227, 255)';
   ctx.fillRect(0, 0, width, height);
 
   for(let i=0; i < pattern.length; i++) {
