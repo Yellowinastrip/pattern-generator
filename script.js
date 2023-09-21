@@ -96,22 +96,16 @@ function drawPattern(pattern, ctx) {
   const height = canvas.height;
 
   const theme = getTheme();
-  
-  if (theme == 'dark') {
-    ctx.fillStyle = 'Black';
-  } else {
-    ctx.fillStyle = 'White';
-  }
-
+  ctx.fillStyle = (theme == 'dark')? 'Black' : 'White';
   ctx.fillRect(0, 0, width, height);
 
   for(let i=0; i < pattern.length; i++) {
-    drawLine(ctx, i, pattern, width, height);
+    drawLine(ctx, i, pattern, width, height, theme);
   }
   
 }
 
-function drawLine(ctx, i, pattern, width, height) {
+function drawLine(ctx, i, pattern, width, height, theme) {
     const {stick, candy} = pattern[i]; 
     
     const epsilon = +document.getElementById('epsilon').value;
@@ -137,7 +131,6 @@ function drawLine(ctx, i, pattern, width, height) {
         const len = inp.value * epsilon;
         
         let color;
-        const theme = getTheme();
 
         if (theme == 'dark') {
           if(inp.getAttribute('selected') == 'true') {
@@ -194,6 +187,16 @@ function generateContent() {
   const epsilonForm = document.getElementById('epsilon-form');
   removeChildren(epsilonForm);
   generateEpsilonForm(epsilonForm, lollipops, ctx);
+
+  const theme = getTheme();
+
+  if (theme == 'dark') {
+    document.body.classList.remove('light');
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+  }
 
   drawPattern(lollipops, ctx);
 };
