@@ -96,7 +96,7 @@ function drawPattern(pattern, ctx) {
   const height = canvas.height;
 
   const theme = getTheme();
-  ctx.fillStyle = (theme == 'dark')? 'Black' : 'rgb(136, 227, 255)';
+  ctx.fillStyle = (theme == 'dark')? 'Black' : 'White';
   ctx.fillRect(0, 0, width, height);
 
   for(let i=0; i < pattern.length; i++) {
@@ -140,9 +140,9 @@ function drawLine(ctx, i, pattern, width, height, theme) {
           }
         } else {
           if(inp.getAttribute('selected') == 'true') {
-            color = line[j][1] ? 'Blue': 'Yellow';
+            color = line[j][1] ? 'Cyan': 'Yellow';
           } else {
-            color = line[j][1] ? 'DarkBlue': 'Gold';
+            color = line[j][1] ? 'DarkBlue': 'Orange';
           }
         }
         
