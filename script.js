@@ -95,7 +95,14 @@ function drawPattern(pattern, ctx) {
   const width = canvas.width;
   const height = canvas.height;
 
-  ctx.fillStyle = 'Black';
+  const theme = getTheme();
+  
+  if (theme == 'dark') {
+    ctx.fillStyle = 'Black';
+  } else {
+    ctx.fillStyle = 'White';
+  }
+
   ctx.fillRect(0, 0, width, height);
 
   for(let i=0; i < pattern.length; i++) {
@@ -130,12 +137,22 @@ function drawLine(ctx, i, pattern, width, height) {
         const len = inp.value * epsilon;
         
         let color;
-        if(inp.getAttribute('selected') == 'true') {
-          color = line[j][1] ? 'LawnGreen': 'Red';
-        } else {
-          color = line[j][1] ? 'Green': 'Maroon';
-        }
+        const theme = getTheme();
 
+        if (theme == 'dark') {
+          if(inp.getAttribute('selected') == 'true') {
+            color = line[j][1] ? 'LawnGreen': 'Red';
+          } else {
+            color = line[j][1] ? 'Green': 'Maroon';
+          }
+        } else {
+          if(inp.getAttribute('selected') == 'true') {
+            color = line[j][1] ? 'Blue': 'Yellow';
+          } else {
+            color = line[j][1] ? 'DarkBlue': 'Gold';
+          }
+        }
+        
         for (let k = epsilon; k <= len; k+=epsilon) {
 
           ctx.beginPath();
@@ -187,7 +204,21 @@ function removeChildren(node) {
   }
 }
 
+function getTheme() {
+  const cb = document.getElementById('theme');
+  let out;
+  if (cb.checked) {
+    out = 'dark';
+  } else {
+    out = 'light';
+  }
+  return out;
+}
+
 window.onload = () => {
   generatePatternSelect(pattern);
-  generateContent();  
+  generateContent(); 
+
+  const cb = document.getElementById('theme');
+  cb.addEventListener('click', generateContent); 
 };
