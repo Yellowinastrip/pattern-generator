@@ -109,10 +109,10 @@ const longHigway = {
 
 const typeC = {
   lollipops: [
-    {candy: [['b', true], ['f', true], ['g', false]]},
-    {candy: [['b', true], ['d', false], ['i', true]]},
-    {candy: [['c', true], ['e', true], ['g', false]]},
-    {candy: [['c', true], ['d', false], ['h', true]]},
+    {stick: [], candy: [['b', true], ['f', true], ['g', false]]},
+    {stick: [], candy: [['b', true], ['d', false], ['i', true]]},
+    {stick: [], candy: [['c', true], ['e', true], ['g', false]]},
+    {stick: [], candy: [['c', true], ['d', false], ['h', true]]},
   ],
   inputs: ['b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],
 };
