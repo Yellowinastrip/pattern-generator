@@ -107,10 +107,21 @@ const longHigway = {
 };
 
 
+const typeC = {
+  lollipops: [
+    {candy: [['b', true], ['f', true], ['g', false]]},
+    {candy: [['b', true], ['d', false], ['i', true]]},
+    {candy: [['c', true], ['e', true], ['g', false]]},
+    {candy: [['c', true], ['d', false], ['h', true]]},
+  ],
+  inputs: ['b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'],
+};
+
 
 export const pattern = [
   ['Type A', typeA],
   ['Type A (2 - 3, 5, 7)', typeA_1],
   ['Type B', typeB], 
-  ['Type B (1 - 8)', typeB_1], 
+  ['Type B (1 - 8)', typeB_1],
+  ['Type C', typeC], 
 ];
